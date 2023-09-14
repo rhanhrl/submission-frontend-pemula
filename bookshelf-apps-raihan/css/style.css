@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: hsl(217, 91%, 60%);
+  --gray: hsl(215, 20%, 65%);
+  --bg-body: rgb(248, 250, 252);
+  --paragraph-color: rgb(51, 65, 85);
+  --dark: rgb(15, 23, 42);
+}
+
+body {
+  background-image: url('../image/perpus.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.top,
+.bottom {
+  display: flex;
+  gap: 1rem;
+  
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container,
+.notRead-container,
+.doneRead-container {
+  padding: 1rem;
+  background: #9297f7;
+  border-radius: 1rem;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+  border: 2px solid;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: cornflowerblue;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+
+.form-group label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+  transition: 0.3s;
+  cursor: text;
+}
+
+.form-group input {
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-group input:not(:placeholder-shown),
+.form-group input:focus {
+  border: 2px solid var(--primary);
+}
+
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group input:focus ~ label {
+  top: 0;
+  left: 0.75rem;
+  color: var(--primary);
+  padding: 0 0.25rem;
+  background-color: #fff;
+  font-size: 12px;
+}
+
+.submit-btn {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  float: right;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: hsl(217, 91%, 50%);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.check input,
+.check label {
+  cursor: pointer;
+}
+
+.check label {
+  color: black;
+}
+
+
+.element {
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.element-title {
+  color: black;
+}
+
+.element-title span {
+  color: black;
+}
+
+.element-writer {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.element-action {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.hapus-btn,
+.selesai-btn,
+.kembalikan-btn,
+.reset-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.hapus-btn {
+  background-color: #ef4444;
+}
+
+.hapus-btn:hover {
+  background-color: hsl(0, 84%, 50%);
+}
+
+.reset-btn {
+  background-color: var(--gray);
+}
+
+.reset-btn:hover {
+  background-color: hsl(215, 20%, 55%);
+}
+
+
+.selesai-btn {
+  background-color: #22c55e;
+}
+
+.selesai-btn:hover {
+  background-color: hsl(142, 71%, 40%);
+}
+
+.kembalikan-btn {
+  background-color: #facc15;
+}
+
+.kembalikan-btn:hover {
+  background-color: hsl(48, 96%, 47%);
+}
+
+.alert {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  color: black;
+  background-color: #e1bfff;
+  transition: 2s;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: cornflowerblue;
+  width: 100%;
+}
+
+@media screen and (max-width: 502px) {
+  .form-container,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookshelf Apps</title>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <h2>Bookshelf - Raihan</h2>
+            </header>
+
+            <div class="form-container">
+                <div class="form-main">
+                    <h2 class="title">Tambah Buku Baru</h2>
+                    <form id="formDataBuku" action="" method="post">
+
+                        <div class="">
+                            <label for="judul">Judul</label><br>
+                            <input type="text" name="judul" id="judul" placeholder="Masukan Judul">
+                        </div>
+
+                        <div class="">
+                            <div class="">
+                                <label for="penulis">Penulis</label><br>
+                                <input type="text" name="penulis" id="penulis" placeholder="Masukan Penulis">
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <label for="tahun">Tahun</label><br>
+                            <input type="number" name="tahun" id="tahun" placeholder="Masukan Tahun Terbit">
+                        </div>
+
+                        <div class="check">
+                            <input type="checkbox" name="isRead" id="isRead" placeholder="">
+                            <label for="isRead">Sudah selesai dibaca</label>
+                            <button type="submit" class="submit-btn">Simpan</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+            
+                <div class="notRead-container">
+                    <h2 class="title">Belum Selesai Dibaca</h2>
+                    <div id="unRead">
+                    </div>
+                </div>
+            
+                
+                <div class="doneRead-container">
+                    <h2 class="title">Sudah Dibaca</h2>
+                    <div id="doneRead">
+                    </div>
+                </div>
+            
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+    <footer>Bookshelf Dicoding &copy; 2023</footer>
+</html>
